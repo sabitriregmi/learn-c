@@ -6,6 +6,7 @@ EXECUTABLE = output
 all: $(EXECUTABLE) build clean
 
 $(EXECUTABLE): $(SRC_DIR)/$(f).c
+	@echo "\n"
 	@$(CC) -o $@ $<
 
 build: $(EXECUTABLE)
@@ -13,3 +14,4 @@ build: $(EXECUTABLE)
 
 clean:
 	@rm -f $(EXECUTABLE)
+	@echo "\n"
